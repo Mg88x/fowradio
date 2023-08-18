@@ -14,23 +14,21 @@
         header {
             background-color: #007AA6;
             color: #fff;
-            padding: 40px 20px 30px; /* Ajustar el espacio arriba y abajo del encabezado */
+            padding: 40px 20px 30px;
             text-align: center;
         }
         header h1 {
             font-family: "Lucida Calligraphy", cursive;
             font-size: 54px;
-            margin: 0; /* Eliminar el margen inferior del título */
-            padding-bottom: 15px; /* Aumentar el espacio entre el título y el subtítulo */
-            margin-top: 5px; /* Aumentar el espacio entre el título y el borde superior */
+            margin: 0;
+            padding-bottom: 15px;
+            margin-top: 5px;
             color: #fff;
         }
         header h2 {
             font-family: "Optima", sans-serif;
-            font-size: 20px; /* Ajustar el tamaño del subtítulo */
-            margin: 5px 0; /* Ajustar la distancia del subtítulo */
-            font-style: normal; /* Quitar la itálica */
-            font-weight: 300; /* Hacer los trazos más finos */
+            font-size: 24px;
+            margin: 5px 0;
             color: #fff;
         }
         main {
@@ -39,9 +37,6 @@
         }
         .station {
             margin-top: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Distribución en 2 columnas */
-            gap: 10px; /* Espacio entre botones */
         }
         .play-button {
             background-color: #0080A0;
@@ -51,20 +46,19 @@
             font-size: 18px;
             cursor: pointer;
             border-radius: 5px;
+            margin: 10px 5px;
             transition: background-color 0.3s ease-in-out;
         }
         .play-button:hover {
             background-color: #005C7A;
         }
         footer {
-            margin-top: 30px; /* Ajustar margen superior */
+            margin-top: 50px;
             text-align: center;
-            background-color: #007AA6; /* Cambiar color de fondo */
-            padding: 10px 0; /* Ajustar relleno */
         }
         footer p {
             font-size: 14px;
-            color: #fff; /* Cambiar color de texto */
+            color: #888;
         }
     </style>
 </head>
@@ -79,6 +73,7 @@
             <button class="play-button" id="metal">Metal</button>
             <button class="play-button" id="Rock">Rock</button>
             <button class="play-button" id="reggae">Reggae</button> <!-- Nuevo botón "Reggae" -->
+            <!-- Agrega más botones de reproducción aquí para cada estación -->
         </div>
     </main>
     <footer>
@@ -121,6 +116,7 @@
         document.getElementById('reggae').addEventListener('click', function() {
             playStation('https://antares.dribbcast.com/proxy/jrn_reggae?mp=/stream', this);
         });
+        // Agrega más listeners para cada estación
     </script>
 </body>
 </html>
