@@ -14,21 +14,24 @@
         header {
             background-color: #007AA6;
             color: #fff;
-            padding: 40px 20px 30px;
+            padding: 40px 20px 20px; /* Ajustar el espacio arriba y abajo del encabezado */
             text-align: center;
         }
         header h1 {
             font-family: "Lucida Calligraphy", cursive;
             font-size: 54px;
-            margin: 0;
-            padding-bottom: 15px;
-            margin-top: 5px;
+            margin: 0; /* Eliminar el margen inferior del título */
+            padding-bottom: 15px; /* Aumentar el espacio entre el título y el subtítulo */
+            margin-top: 5px; /* Aumentar el espacio entre el título y el borde superior */
+            font-weight: bold;
             color: #fff;
         }
         header h2 {
             font-family: "Optima", sans-serif;
-            font-size: 24px;
-            margin: 5px 0;
+            font-size: 28px; /* Reducir el tamaño del subtítulo */
+            font-style: italic; /* Cambiar a itálica */
+            letter-spacing: 0.8px; /* Reducir el espaciado entre letras */
+            margin: 10px 0; /* Ajustar la distancia del subtítulo */
             color: #fff;
         }
         main {
@@ -37,6 +40,9 @@
         }
         .station {
             margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas */
+            gap: 10px; /* Espaciado entre botones */
         }
         .play-button {
             background-color: #0080A0;
@@ -53,12 +59,16 @@
             background-color: #005C7A;
         }
         footer {
-            margin-top: 50px;
+            margin-top: 30px; /* Reducir el margen superior del pie de página */
+            margin-bottom: 20px; /* Añadir margen inferior al pie de página */
             text-align: center;
+            background-color: #007AA6; /* Cambiar color de fondo */
+            padding: 10px; /* Ajustar el espaciado interno del pie de página */
         }
         footer p {
             font-size: 14px;
-            color: #888;
+            color: #fff;
+            margin: 0;
         }
     </style>
 </head>
@@ -69,11 +79,10 @@
     </header>
     <main>
         <div class="station">
-            <button class="play-button" id="jRock">J ROCK</button>
             <button class="play-button" id="metal">Metal</button>
+            <button class="play-button" id="reggae">Reggae</button>
+            <button class="play-button" id="jRock">J ROCK</button>
             <button class="play-button" id="Rock">Rock</button>
-            <button class="play-button" id="reggae">Reggae</button> <!-- Nuevo botón "Reggae" -->
-            <!-- Agrega más botones de reproducción aquí para cada estación -->
         </div>
     </main>
     <footer>
@@ -101,20 +110,20 @@
             button.style.backgroundColor = "#005C7A";
         }
         
-        document.getElementById('jRock').addEventListener('click', function() {
-            playStation('https://kathy.torontocast.com:3340/;.mp3', this);
-        });
-
         document.getElementById('metal').addEventListener('click', function() {
             playStation('https://quincy.torontocast.com:1505/stream', this);
         });
 
-        document.getElementById('Rock').addEventListener('click', function() {
-            playStation('https://stream.laut.fm/1000rockhits', this);
-        });
-
         document.getElementById('reggae').addEventListener('click', function() {
             playStation('https://antares.dribbcast.com/proxy/jrn_reggae?mp=/stream', this);
+        });
+
+        document.getElementById('jRock').addEventListener('click', function() {
+            playStation('https://kathy.torontocast.com:3340/;.mp3', this);
+        });
+
+        document.getElementById('Rock').addEventListener('click', function() {
+            playStation('https://stream.laut.fm/1000rockhits', this);
         });
         // Agrega más listeners para cada estación
     </script>
