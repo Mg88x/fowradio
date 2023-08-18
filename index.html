@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,24 +81,6 @@
         <p>Powered by MG88X®</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-<footer>
-        <p id="visitCount">Visitas: <span id="counter">0</span></p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-    <script>
-        // Tu código JavaScript para reproducir audio aquí
-    </script>
-    <script>
-        var visitCount = localStorage.getItem("visitCount");
-        if (visitCount === null) {
-            visitCount = 0;
-        }
-        
-        visitCount++;
-        localStorage.setItem("visitCount", visitCount);
-        document.getElementById("counter").textContent = visitCount;
-    </script>
-    
     <script>
         var sound;
         var currentButton;
@@ -130,7 +114,6 @@
             playStation('https://stream.laut.fm/1000rockhits', this);
         });
         // Agrega más listeners para cada estación
-        
     </script>
 </body>
 </html>
