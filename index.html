@@ -4,41 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Force of Will</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #333;
-        }
-        header {
-            background-color: #007AA6;
-            color: #fff;
-            padding: 40px 20px 30px; /* Ajustar el espacio arriba y abajo del encabezado */
-            text-align: center;
-        }
-        header h1 {
-            font-family: "Lucida Calligraphy", cursive;
-            font-size: 54px;
-            margin: 0; /* Eliminar el margen inferior del título */
-            padding-bottom: 15px; /* Aumentar el espacio entre el título y el subtítulo */
-            margin-top: 5px; /* Aumentar el espacio entre el título y el borde superior */
-            color: #fff;
-        }
-        header h2 {
-            font-family: "Optima", sans-serif;
-            font-size: 24px;
-            margin: 5px 0; /* Ajustar la distancia del subtítulo */
-            color: #fff;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        .station {
-            margin-top: 20px;
-        }
-        .play-button {
+        /* Estilos que ya tienes */
+
+        /* Estilos para el contador y el botón de compartir */
+        .counter-button {
             background-color: #0080A0;
             color: #fff;
             border: none;
@@ -49,39 +18,30 @@
             margin: 10px 5px;
             transition: background-color 0.3s ease-in-out;
         }
-        .play-button:hover {
+        .counter-button:hover {
             background-color: #005C7A;
-        }
-        footer {
-            margin-top: 50px;
-            text-align: center;
-        }
-        footer p {
-            font-size: 14px;
-            color: #888;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Force of Will</h1>
-        <h2>RADIO HUB</h2>
+        <!-- Encabezado que ya tienes -->
     </header>
     <main>
         <div class="station">
-            <button class="play-button" id="jRock">J ROCK</button>
-            <button class="play-button" id="metal">Metal</button>
-            <button class="play-button" id="Rock">Rock</button> <!-- Nuevo botón "Rock" -->
-            <!-- Agrega más botones de reproducción aquí para cada estación -->
+            <!-- Botones de reproducción que ya tienes -->
         </div>
     </main>
     <footer>
         <p>Powered by MG88X®</p>
     </footer>
+    <button class="counter-button" id="visitCounter">Visitas: 0</button>
+    <button class="counter-button" id="shareButton">Compartir</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script>
         var sound;
         var currentButton;
+        var visitCounter = 0; // Contador de visitas
 
         // Función para cargar y reproducir el audio de cada estación
         function playStation(audioSrc, button) {
@@ -111,9 +71,20 @@
         document.getElementById('Rock').addEventListener('click', function() {
             playStation('https://stream.laut.fm/1000rockhits', this);
         });
+
+        // Incrementar el contador de visitas y actualizar el botón
+        document.getElementById('visitCounter').addEventListener('click', function() {
+            visitCounter++;
+            this.textContent = 'Visitas: ' + visitCounter;
+        });
+
+        // Acción para el botón de compartir
+        document.getElementById('shareButton').addEventListener('click', function() {
+            var url = window.location.href;
+            var message = '¡Escucha Force of Will Radio Hub! ' + url;
+            window.alert(message);
+        });
         // Agrega más listeners para cada estación
     </script>
 </body>
 </html>
-
-
