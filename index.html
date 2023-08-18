@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,20 +78,8 @@
     </main>
     <footer>
         <p>Powered by MG88X®</p>
-          <!-- Contador de visitas -->
-        <p class="visit-counter">Visitas: <span id="visitCount">0</span></p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-    <script>
-        var sound;
-        var currentButton;
-
-        // Función para cargar y reproducir el audio de cada estación...
-        
-        // Contador de visitas
-        var visitCount = 0;
-        var visitCountElement = document.getElementById('visitCount');
-        visitCountElement.textContent = visitCount;
+ <!-- Contador de visitas -->
+    <p class="visit-counter">Visitas: <span id="visitCount">0</span></p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script>
@@ -126,6 +115,11 @@
             playStation('https://stream.laut.fm/1000rockhits', this);
         });
         // Agrega más listeners para cada estación
+        
+         // Contador de visitas
+    var visitCount = 0;
+    var visitCountElement = document.getElementById('visitCount');
+    visitCountElement.textContent = visitCount;
     </script>
 </body>
 </html>
