@@ -98,13 +98,17 @@
             currentButton = button;
             button.style.backgroundColor = "#005C7A";
         }
+        document.getElementById('Rock').addEventListener('click', function() {
+             playStation('https://stream.laut.fm/1000rockhits/;.mp3', this);
+        });
+    
+
+        document.getElementById('Metal').addEventListener('click', function() {
+            playStation('https://quincy.torontocast.com:1505/stream', this);
+        });    
         
         document.getElementById('jRock').addEventListener('click', function() {
             playStation('https://kathy.torontocast.com:3340/;.mp3', this);
-        });
-
-        document.getElementById('metal').addEventListener('click', function() {
-            playStation('https://quincy.torontocast.com:1505/stream', this);
         });
         // Agrega más listeners para cada estación
     </script>
