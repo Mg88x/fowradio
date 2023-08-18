@@ -79,22 +79,23 @@
         <p>Powered by MG88X®</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-
 <footer>
-    <p id="visitCount">Visitas: <span id="counter">0</span></p>
-</footer>
-<script>
-    // Obtiene el contador actual de localStorage o inicializa en 0 si no existe
-    var visitCount = localStorage.getItem("visitCount");
-    if (visitCount === null) {
-        visitCount = 0;
-    }
-    
-    // Incrementa el contador y actualiza el valor en la página y en localStorage
-    visitCount++;
-    localStorage.setItem("visitCount", visitCount);
-    document.getElementById("counter").textContent = visitCount;
-</script>
+        <p id="visitCount">Visitas: <span id="counter">0</span></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script>
+        // Tu código JavaScript para reproducir audio aquí
+    </script>
+    <script>
+        var visitCount = localStorage.getItem("visitCount");
+        if (visitCount === null) {
+            visitCount = 0;
+        }
+        
+        visitCount++;
+        localStorage.setItem("visitCount", visitCount);
+        document.getElementById("counter").textContent = visitCount;
+    </script>
     
     <script>
         var sound;
