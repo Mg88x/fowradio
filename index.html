@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,10 +77,25 @@
     </main>
     <footer>
         <p>Powered by MG88X®</p>
- <!-- Contador de visitas -->
-    <p class="visit-counter">Visitas: <span id="visitCount">0</span></p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+<footer>
+    <p id="visitCount">Visitas: <span id="counter">0</span></p>
+</footer>
+<script>
+    // Obtiene el contador actual de localStorage o inicializa en 0 si no existe
+    var visitCount = localStorage.getItem("visitCount");
+    if (visitCount === null) {
+        visitCount = 0;
+    }
+    
+    // Incrementa el contador y actualiza el valor en la página y en localStorage
+    visitCount++;
+    localStorage.setItem("visitCount", visitCount);
+    document.getElementById("counter").textContent = visitCount;
+</script>
+    
     <script>
         var sound;
         var currentButton;
@@ -116,10 +130,6 @@
         });
         // Agrega más listeners para cada estación
         
-         // Contador de visitas
-    var visitCount = 0;
-    var visitCountElement = document.getElementById('visitCount');
-    visitCountElement.textContent = visitCount;
     </script>
 </body>
 </html>
