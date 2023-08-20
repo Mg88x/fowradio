@@ -50,7 +50,7 @@
             cursor: pointer;
             border-radius: 5px;
             margin: 5px;
-            width: calc(45% - 10px); /* Ajuste para espaciar los botones correctamente */
+            width: calc(45% - 10px);
             transition: background-color 0.3s ease-in-out;
         }
         .play-button:hover {
@@ -79,7 +79,7 @@
             <button class="play-button" id="punk">Punk</button>
             <button class="play-button" id="reggae">Reggae</button>
             <button class="play-button" id="Rock">Rock</button>
-            <!-- Agrega más botones de reproducción aquí para cada estación -->
+         
         </div>
     </main>
     <footer>
@@ -90,7 +90,6 @@
         var sound;
         var currentButton;
 
-        // Función para cargar y reproducir el audio de cada estación
         function playStation(audioSrc, button) {
             if (sound) {
                 sound.unload();
@@ -130,10 +129,10 @@
         document.getElementById('Rock').addEventListener('click', function() {
             playStation('https://stream.laut.fm/1000rockhits', this);
         });
-        // Agrega más listeners para cada estación
     </script>
 </body>
 </html>
+
 
 
 
