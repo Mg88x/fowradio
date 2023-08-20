@@ -4,7 +4,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Force of Will</title>
     <style>
-        /* Estilos existentes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #007AA6;
+            color: #fff;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+        header h1 {
+            font-family: "Lucida Calligraphy", cursive;
+            font-size: 54px;
+            margin: 0;
+            padding-bottom: 15px;
+            margin-top: 5px;
+            color: #fff;
+        }
+        header h2 {
+            font-family: "Optima", sans-serif;
+            font-size: 18px;
+            margin: 5px 0;
+            color: #fff;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .station {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .play-button {
+            background-color: #0080A0;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            width: 45%;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .play-button:hover {
+            background-color: #005C7A;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+        }
+        footer p {
+            font-size: 14px;
+            color: #888;
+        }
     </style>
 </head>
 <body>
@@ -20,6 +79,7 @@
             <button class="play-button" id="reggae">Reggae</button>
             <button class="play-button" id="medieval">Medieval</button>
             <button class="play-button" id="punk">Punk</button>
+            <!-- Agrega más botones de reproducción aquí para cada estación -->
         </div>
     </main>
     <footer>
@@ -46,7 +106,7 @@
             currentButton = button;
             button.style.backgroundColor = "#005C7A";
         }
-
+        
         document.getElementById('jRock').addEventListener('click', function() {
             playStation('https://kathy.torontocast.com:3340/;.mp3', this);
         });
@@ -70,6 +130,7 @@
         document.getElementById('punk').addEventListener('click', function() {
             playStation('http://carol.epichosts.co.uk:8430/autodj.mp3', this);
         });
+        // Agrega más listeners para cada estación
     </script>
 </body>
 </html>
