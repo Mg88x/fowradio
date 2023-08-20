@@ -73,12 +73,13 @@
     </header>
     <main>
         <div class="station">
-            <button class="play-button" id="jRock">J ROCK</button>
+            <button class="play-button" id="jRock">jRock</button>
             <button class="play-button" id="metal">Metal</button>
             <button class="play-button" id="Rock">Rock</button>
             <button class="play-button" id="reggae">Reggae</button>
-            <button class="play-button" id="medieval">Medieval</button>
             <button class="play-button" id="punk">Punk</button>
+            <button class="play-button" id="medieval">Medieval</button>
+          
             <!-- Agrega más botones de reproducción aquí para cada estación -->
         </div>
     </main>
@@ -123,13 +124,14 @@
             playStation('https://antares.dribbcast.com/proxy/jrn_reggae?mp=/stream', this);
         });
 
+        document.getElementById('punk').addEventListener('click', function() {
+            playStation('http://carol.epichosts.co.uk:8430/autodj.mp3', this);
+        });
+        
         document.getElementById('medieval').addEventListener('click', function() {
             playStation('https://mediaserv73.live-streams.nl:18058/stream', this);
         });
 
-        document.getElementById('punk').addEventListener('click', function() {
-            playStation('http://carol.epichosts.co.uk:8430/autodj.mp3', this);
-        });
         // Agrega más listeners para cada estación
     </script>
 </body>
